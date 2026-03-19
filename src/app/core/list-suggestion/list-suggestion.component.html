@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Liste des suggestions</h2>
+
+  <!-- Méthode avec Two-way binding -->
+  <input 
+    type="text"
+    placeholder="Rechercher une suggestion"
+    [(ngModel)]="searchText"
+    class="search-bar"
+  />
+
+  <!-- Méthode avec NgFor -->
+  <div class="card" *ngFor="let s of filteredSuggestions">
+
+    <!-- Méthode avec Interpolation -->
+    <h3>{{ s.title }}</h3>
+
+    <p class="category">
+      {{ s.category }} - {{ s.date | date:'dd MMM yyyy' }}
+    </p>
+
+    <p>{{ s.description }}</p>
+
+    <!-- Méthode avec NgIf -->
+    <span *ngIf="s.status === 'acceptee'" class="badge accepted">
+      ACCEPTÉE
+    </span>
+
+    <span *ngIf="s.status === 'refusee'" class="badge refused">
+      REFUSÉE
+    </span>
+
+    <span *ngIf="s.status === 'en_attente'" class="badge pending">
+      EN ATTENTE
+    </span>
+
+    <!-- Buttons -->
+    <div *ngIf="s.status !== 'refusee'" class="actions">
+      <button (click)="likeSuggestion(s)" class="like-btn">
+        👍 Like {{ s.nbLikes }}
+      </button>
+
+      <button (click)="addToFavorites(s)" class="fav-btn">
+        ❤️ Ajouter aux favoris
+      </button>
+    </div>
+    
+  </div>
+</div>
+

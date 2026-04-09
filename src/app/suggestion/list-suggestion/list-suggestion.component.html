@@ -33,6 +33,10 @@
     <span *ngIf="s.status === 'en_attente'" class="badge pending">
       EN ATTENTE
     </span>
+    <button class="eye-btn"
+    [routerLink]="['/detailsSuggestions', s.id]">
+      👁️ 
+    </button>
 
     <!-- Buttons -->
     <div *ngIf="s.status !== 'refusee'" class="actions">

@@ -7,10 +7,11 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.component';
+import { ListSuggestionComponent } from './suggestion/list-suggestion/list-suggestion.component';
 import { HomeComponent } from './core/home/home.component';
 import { NotfoundComponent } from './core/notfound/notfound.component';
-import { SuggessionDetailsComponent } from './suggession-details/suggession-details.component';
+import { SuggessionDetailsComponent } from './suggestion/suggession-details/suggession-details.component';
+import { SuggestionModule } from './suggestion/suggestion.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SuggessionDetailsComponent } from './suggession-details/suggession-deta
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule 
+    FormsModule,
+    SuggestionModule 
   ],
    providers: [
     provideClientHydration()

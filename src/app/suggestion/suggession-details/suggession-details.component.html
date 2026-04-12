@@ -1,4 +1,4 @@
-<div class="suggestion-container" *ngIf="suggestion; else notFound">
+<div class="suggestion-container" *ngIf="suggestion;">
   <h2>Détails de la suggestion</h2>
 
   <p><strong>ID :</strong> {{ suggestion.id }}</p>
@@ -6,6 +6,8 @@
   <p><strong>Description :</strong> {{ suggestion.description }}</p>
   <p><strong>Catégorie :</strong> {{ suggestion.category }}</p>
   <p><strong>Date :</strong> {{ suggestion.date | date:'dd/MM/yyyy' }}</p>
+  <!--  //| pipe pour formater la date 
+  // dyma tji piège heya w uppercase w lowercase-->
   <p><strong>Status :</strong> {{ suggestion.status }}</p>
   <p><strong>Likes :</strong> {{ suggestion.nbLikes }}</p>
 

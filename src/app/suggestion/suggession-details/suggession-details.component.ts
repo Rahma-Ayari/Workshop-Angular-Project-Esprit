@@ -11,8 +11,7 @@ export class SuggessionDetailsComponent {
   suggestion: any; // variable pour stocker les détails de la suggestion
 
   constructor(private route: ActivatedRoute,private router :Router) {
-   const id = this.route.snapshot.paramMap.get('id');
-    console.log('ID de la suggestion:', id); 
+   
   }
   /**
    * ngOnInit(): void {
@@ -26,12 +25,13 @@ export class SuggessionDetailsComponent {
     this.route.params.subscribe(params => {
       this.id = +params['id']; // Récupérer l'ID de la suggestion à partir des paramètres de la route
       console.log('ID de la suggestion:', this.id); // Afficher l'ID dans la console pour vérification  
-      this.suggestion = this.suggestions.find(s => s.id === this.id);
+      this.suggestion = this.suggestions.find(s => s.id === this.id); //=== trouver la valeur et type par contre == trouver la valeur sans se soucier du type
     });
    }
-
+// deux méthodes goback et routerLink
    goBack() {
-    this.router.navigate(['/listSuggestion']);
+    this.router.navigate(['/listSuggestion']); 
+    // navigate souvent utiliser ajout et pour réderection automatqiue 
   }
 
 

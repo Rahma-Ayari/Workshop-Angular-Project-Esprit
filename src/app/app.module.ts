@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 
@@ -12,6 +12,7 @@ import { HomeComponent } from './core/home/home.component';
 import { NotfoundComponent } from './core/notfound/notfound.component';
 import { SuggessionDetailsComponent } from './suggestion/suggession-details/suggession-details.component';
 import { SuggestionModule } from './suggestion/suggestion.module';
+import { SuggestionFormComponent } from './suggestion/suggestion-form/suggestion-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SuggestionModule } from './suggestion/suggestion.module';
     ListSuggestionComponent,
     HomeComponent,
     NotfoundComponent,
-    SuggessionDetailsComponent
+    SuggessionDetailsComponent,
+    SuggestionFormComponent
   
   ],
   imports: [
@@ -29,7 +31,8 @@ import { SuggestionModule } from './suggestion/suggestion.module';
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    SuggestionModule 
+    SuggestionModule ,
+    ReactiveFormsModule
   ],
    providers: [
     provideClientHydration()

@@ -16,7 +16,7 @@ ngOnInit(): void {
     description:['',[Validators.required,Validators.minLength(30)]],
     category:['',Validators.required],
     date: [{ value: new Date().toLocaleDateString(), disabled: true }],
-    status: [{ value: 'en attente', disabled: true }],
+    status: [{ value: 'en attente', disabled: true }], //qyf yabda string najem na7i l value
     nbLikes: [{ value: 0, disabled: true }]
   })  }
  /*  userForm=new FormGroup({

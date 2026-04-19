@@ -13,6 +13,7 @@ import { NotfoundComponent } from './core/notfound/notfound.component';
 import { SuggessionDetailsComponent } from './suggestion/suggession-details/suggession-details.component';
 import { SuggestionModule } from './suggestion/suggestion.module';
 import { SuggestionFormComponent } from './suggestion/suggestion-form/suggestion-form.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SuggestionFormComponent } from './suggestion/suggestion-form/suggestion
     ReactiveFormsModule
   ],
    providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })

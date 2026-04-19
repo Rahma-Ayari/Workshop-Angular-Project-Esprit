@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'add', component: SuggestionFormComponent },
   { path: 'listSuggestion', component: ListSuggestionComponent },
   { path: 'detailsSuggestions/:id', component: SuggessionDetailsComponent },
+  { path: 'update/:id', component: SuggestionFormComponent },
   { path: '**', component: NotfoundComponent }
 
 ];

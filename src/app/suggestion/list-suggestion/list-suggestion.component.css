@@ -81,3 +81,11 @@
   background: rgba(255, 255, 255, 0.4);
   transform: scale(1.1);
 }
+
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+}

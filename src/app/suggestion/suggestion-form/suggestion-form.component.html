@@ -46,7 +46,7 @@
 
     <!-- SUBMIT -->
     <button type="submit" [disabled]="suggestionForm.invalid">
-      Soumettre
+      {{ id ? 'Save' : 'Soumettre' }}
     </button>
 
   </form>

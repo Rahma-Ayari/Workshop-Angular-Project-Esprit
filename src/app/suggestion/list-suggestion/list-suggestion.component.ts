@@ -17,7 +17,7 @@ export class ListSuggestionComponent {
 ];
 
   ngOnInit() {
-    this.suggestionService.getSuggestionsList().subscribe((data: any) => {
+    this.suggestionService.getSuggestionsList().subscribe((data: any) => { //subscribe like ecouteur observable
       this.suggestions = data;
     });
   }
